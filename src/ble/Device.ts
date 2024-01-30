@@ -1,5 +1,5 @@
 import {IDevice} from "./IDevice";
-import {Characteristic, Peripheral} from "noble";
+import {Characteristic, Peripheral} from "@abandonware/noble";
 
 class Device implements IDevice {
 

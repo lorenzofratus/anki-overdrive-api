@@ -1,8 +1,8 @@
 {
-  "name": "anki-overdrive-api",
+  "name": "@lorenzofratus/anki-overdrive-api",
   "version": "1.0.1-beta.1",
   "description": "API for Anki Overdrive developer interface",
-  "author": "Adrian Weber <adrian.weber@msg.group>",
+  "author": "Lorenzo Fratus <lorenzo.fratus.dev@gmail.com>",
   "license": "MIT",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -35,10 +35,9 @@
     "typescript": "^3.1.6"
   },
   "dependencies": {
-    "@types/noble": "^0.0.37",
+    "@abandonware/noble": "^1.9.2-23",
     "@types/websocket": "^0.0.40",
     "@types/ws": "^6.0.1",
-    "noble": "^1.9.1",
     "websocket": "^1.0.28"
   },
   "nyc": {

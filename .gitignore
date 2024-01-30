@@ -4,6 +4,9 @@ node_modules/
 # Idea developer tools
 .idea/
 
+# Visual Studio Code
+.vscode/
+
 # Istanbul code coverage
 .nyc_output/
 coverage/

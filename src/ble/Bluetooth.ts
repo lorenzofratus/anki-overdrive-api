@@ -1,5 +1,5 @@
 import {IBluetooth, State} from "./IBluetooth";
-import * as noble from "noble";
+import * as noble from "@abandonware/noble";
 import {IDevice} from "./IDevice";
 import {Device} from "./Device";
 
