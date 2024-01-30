@@ -19,6 +19,7 @@ import {VersionResponse} from "../message/v2c/VersionResponse";
 import {SetOffsetFromRoadCenter} from "../message/c2v/SetOffsetFromRoadCenter";
 import {SetSpeed} from "../message/c2v/SetSpeed";
 import {Turn, TurnType} from "../message/c2v/Turn";
+import { SetLights } from "../message/c2v/SetLights";
 
 class Vehicle implements IVehicle {
 
@@ -147,6 +148,13 @@ class Vehicle implements IVehicle {
             speed,
             acceleration,
             limit
+        ))
+    }
+
+    public setLights(lights: number): void {
+        this.writeAndPublish(new SetLights(
+            this.id,
+            lights,
         ))
     }
 
