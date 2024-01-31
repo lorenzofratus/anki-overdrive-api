@@ -20,6 +20,7 @@ import {SetOffsetFromRoadCenter} from "../message/c2v/SetOffsetFromRoadCenter";
 import {SetSpeed} from "../message/c2v/SetSpeed";
 import {Turn, TurnType} from "../message/c2v/Turn";
 import { SetLights } from "../message/c2v/SetLights";
+import { LightChannelConfig, SetLightPattern } from "../message/c2v/SetLightPattern";
 
 class Vehicle implements IVehicle {
 
@@ -155,6 +156,13 @@ class Vehicle implements IVehicle {
         this.writeAndPublish(new SetLights(
             this.id,
             lightsMask,
+        ))
+    }
+
+    public setLightPattern(channels: LightChannelConfig[]): void {
+        this.writeAndPublish(new SetLightPattern(
+            this.id,
+            channels,
         ))
     }
 
