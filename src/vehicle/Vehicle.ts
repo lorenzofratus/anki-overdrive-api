@@ -151,10 +151,10 @@ class Vehicle implements IVehicle {
         ))
     }
 
-    public setLights(lights: number): void {
+    public setLights(lightsMask: number): void {
         this.writeAndPublish(new SetLights(
             this.id,
-            lights,
+            lightsMask,
         ))
     }
 
