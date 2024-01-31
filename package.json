@@ -1,6 +1,6 @@
 {
   "name": "@lorenzofratus/anki-overdrive-api",
-  "version": "1.0.3-1",
+  "version": "1.0.3-2",
   "description": "API for Anki Overdrive developer interface",
   "author": "Lorenzo Fratus <lorenzo.fratus.dev@gmail.com>",
   "license": "MIT",
