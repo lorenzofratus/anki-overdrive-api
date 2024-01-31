@@ -14,7 +14,8 @@
     "test:e2e": "tsc -p . && mocha test/e2e/**/*spec.js",
     "test:coverage": "nyc npm t",
     "docs": "typedoc --out docs src --mode file && node post-process-docs",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "npm run build && npm run docs"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
