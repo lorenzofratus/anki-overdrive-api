@@ -3,7 +3,6 @@ import { ANKI_VEHICLE_MSG_C2V_LIGHTS_PATTERN } from "../Protocol";
 
 const ANKI_VEHICLE_MSG_C2V_LIGHTS_PATTERN_SIZE = 17;
 const ANKI_VEHICLE_MAX_LIGHT_INTENSITY = 14;
-const ANKI_VEHICLE_MAX_LIGHT_TIME = 11;
 
 const LIGHT_CHANNEL_COUNT_MAX = 3;
 const LIGHT_CHANNEL_CONFIG_SIZE = 5;
@@ -40,8 +39,7 @@ class LightChannelConfig {
 		this.effect = effect;
 		this.start = Math.min(start, ANKI_VEHICLE_MAX_LIGHT_INTENSITY);
 		this.end = Math.min(end, ANKI_VEHICLE_MAX_LIGHT_INTENSITY);
-		const cpm = Math.min(cycles_per_minute, ANKI_VEHICLE_MAX_LIGHT_TIME);
-		this.cycles_per_10_sec = cpm / 6;
+		this.cycles_per_10_sec = cycles_per_minute / 6;
 	}
 
 	public writeToBuffer(buffer: Buffer, offset: number) {
