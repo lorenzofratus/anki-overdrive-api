@@ -32,4 +32,5 @@ export * from "./message/v2c/VersionResponse"
 
 export * from "./track/ITrack"
 export * from "./track/Track"
-export * from "./track/TrackScanner"
+export * from "./track/Start"
+export * from "./track/Finish"
