@@ -6,6 +6,7 @@ import {
     ANKI_VEHICLE_MSG_V2C_LOCALIZATION_INTERSECTION_UPDATE,
     ANKI_VEHICLE_MSG_V2C_LOCALIZATION_POSITION_UPDATE,
     ANKI_VEHICLE_MSG_V2C_LOCALIZATION_TRANSITION_UPDATE,
+    ANKI_VEHICLE_MSG_V2C_OFFSET_FROM_ROAD_CENTER_UPDATE,
     ANKI_VEHICLE_MSG_V2C_PING_RESPONSE,
     ANKI_VEHICLE_MSG_V2C_VEHICLE_DELOCALIZED,
     ANKI_VEHICLE_MSG_V2C_VERSION_RESPONSE
@@ -15,6 +16,7 @@ import {LocalizationPositionUpdate} from "./v2c/LocalizationPositionUpdate";
 import {VersionResponse} from "./v2c/VersionResponse";
 import {VehicleDelocalizedUpdate} from "./v2c/VehicleDelocalizedUpdate";
 import {IVehicleMessage} from "./IVehicleMessage";
+import { OffsetFromRoadCenterUpdate } from "./v2c/OffsetFromRoadCenterUpdate";
 
 class MessageBuilder {
 
@@ -53,6 +55,8 @@ class MessageBuilder {
                 return new PingResponse(this._vehicleId, this._payload)
             case ANKI_VEHICLE_MSG_V2C_VEHICLE_DELOCALIZED:
                 return new VehicleDelocalizedUpdate(this._vehicleId, this._payload)
+            case ANKI_VEHICLE_MSG_V2C_OFFSET_FROM_ROAD_CENTER_UPDATE:
+                return new OffsetFromRoadCenterUpdate(this._vehicleId, this._payload)
         }
     }
 
