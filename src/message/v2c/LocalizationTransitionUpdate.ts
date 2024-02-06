@@ -18,13 +18,13 @@ class LocalizationTransitionUpdate extends AbstractVehicleMessage {
     public constructor(vehicleId: string, payload: Buffer) {
         super(vehicleId, payload)
 
-        this.roadPieceId = payload.readUInt8(2)
-        this.prevRoadPieceId = payload.readUInt8(3)
+        this.roadPieceId = payload.readInt8(2)
+        this.prevRoadPieceId = payload.readInt8(3)
         this.offsetFromRoadCenter = payload.readFloatLE(4)
         this.lastRecvLaneChangeCmdId = payload.readUInt8(8)
         this.lastExecLaneChangeCmdId = payload.readUInt8(9)
         this.lastDesiredLaneChangeSpeedMmPerSec = payload.readUInt16LE(10)
-        this.haveFollowLineDriftPixels = payload.readUInt8(12)
+        this.haveFollowLineDriftPixels = payload.readInt8(12)
         this.hadLaneChangeActivity = payload.readUInt8(13)
         this.uphillCounter = payload.readUInt8(14)
         this.downhillCounter = payload.readUInt8(15)

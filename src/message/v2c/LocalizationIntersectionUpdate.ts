@@ -12,7 +12,7 @@ class LocalizationIntersectionUpdate extends AbstractVehicleMessage {
     public constructor(vehicleId: string, payload: Buffer) {
         super(vehicleId, payload)
 
-        this.roadPieceId = payload.readUInt8(2)
+        this.roadPieceId = payload.readInt8(2)
         this.offsetFromRoadCenter = payload.readFloatLE(3)
         this.intersectionCode = payload.readUInt8(7)
         this.isExisting = payload.readUInt8(8)
